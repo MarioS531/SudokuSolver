@@ -73,6 +73,13 @@ function startGame()
     //Starts the time
     startTimer();
 
+    //Show number container
+    id("number-container").classList.remove("hidden");
+
+}
+
+function changeTheme()
+{
     //Sets theme based on input
     if(id("theme-1").checked)
     {
@@ -82,10 +89,6 @@ function startGame()
     {
         qs("body").classList.add("dark");
     }
-
-    //Show number container
-    id("number-container").classList.remove("hidden");
-
 }
 
 function startTimer()

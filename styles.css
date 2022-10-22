@@ -80,6 +80,7 @@ p#timer, p#lives
 
 .tile
 {
+    display: inline-grid;
     border: 1px solid black;
     width: 60px;
     height: 60px;

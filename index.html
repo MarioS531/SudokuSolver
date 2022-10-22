@@ -10,7 +10,7 @@
         <h1>Sudoku</h1>
         <div id="setup-game">
             <div id="diff">
-                <h3>Choos Difficulty: </h3>
+                <h3>Choose Difficulty: </h3>
                 <label><input id="diff-1" type="radio" name="diff" value="easy" checked>Easy</label>
                 <label><input id="diff-2" type="radio" name="diff" value="medium">Medium</label>
                 <label><input id="diff-3" type="radio" name="diff" value="hard">Hard</label>
@@ -23,8 +23,8 @@
             </div>
             <div id="theme">
                 <h3>Choose Theme: </h3>
-                <label><input id="theme-1" type="radio" name="theme" value="light" checked>Light</label>
-                <label><input id="theme-2" type="radio" name="theme" value="dark">Dark</label>
+                <label><input id="theme-1" type="radio" name="theme" value="light" checked onclick="changeTheme()">Light</label>
+                <label><input id="theme-2" type="radio" name="theme" value="dark" onclick="changeTheme()">Dark</label>
             </div>
         </div>
         <button id="start-btn">Create New Game!</button>
