@@ -22,14 +22,14 @@ var disableSelect;
 
 window.onload = function()
 {
-    //Run startgame function when button is clicked
+    //Run startGame function when button is clicked
     id("start-btn").addEventListener("click", startGame);
-    //Add event listener to each nuumber in number container
+    //Add event listener to each number in number container
     for(let i=0; i < id("number-container").children.length; i++)
     {
         id("number-container").children[i].addEventListener("click", function()
         {
-            //If selectin gis not disabled
+            //If selecting is not disabled
             if(!disableSelect)
             {
                 //If number is already selected
@@ -291,7 +291,7 @@ function checkCorrect(tile)
 function clearPrevious()
 {
     //Access all of the tiles
-    let tiles = qsa(".tiles");
+    let tiles = qsa(".tile");
 
     //Remove each tile
     for(let i=0; i < tiles.length; i++)
