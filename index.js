@@ -12,7 +12,7 @@ const hard = [
     "712583694639714258845269173521436987367928415498175326184697532253841769976352841"
   ];
 
-  //Create variables
+//Create variables
 var timer;
 var timeRemaining;
 var lives;
@@ -85,6 +85,7 @@ function startGame()
 
     //Show number container
     id("number-container").classList.remove("hidden");
+
 }
 
 function startTimer()
@@ -200,10 +201,13 @@ function updateMove()
             //Clear the selected variables
             selectedNum = null;
             selectedTile = null;
-
-            //If the number does not match the solution key
-
+            //Check if board is completed
+            if(checkDone())
+            {
+                endGame();
+            }
         }
+        //If the number does not match the solution key
         else
         {
             //Disable selecting new numbers for one second
@@ -239,6 +243,32 @@ function updateMove()
 
             }, 1000);
         }
+    }
+}
+
+function checkDone()
+{
+    let tiles = qsa(".tile");
+    for(let i=0; i<tiles.length; i++)
+    {
+        if(tile.textContent === "") return false;
+    }
+    return true;   
+}
+
+function endGame()
+{
+    //Disables moves and stop the timer
+    disableSelect = true;
+    clearTimeout(timer);
+    //Display win or loss message
+    if(lives === 0 || timeRemaining === 0)
+    {
+        id("lives").textContent = "You Lost!";
+    }
+    else
+    {
+        id("lives").textContent = "You Won!";
     }
 }
 
