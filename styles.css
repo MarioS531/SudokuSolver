@@ -5,8 +5,19 @@
 
 body.dark
 {
-    background-color: #333333;
+    background-color: #141d26;
     color: white;
+}
+
+body.dark
+{
+    background-color: #141d26;
+    color: white;
+}
+
+body.dark > footer
+{
+    background-color:  #242446!important;
 }
 
 header
@@ -113,4 +124,10 @@ p.incorrect
 footer{
     background-color: lightgray;
     justify-content: center;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    height:40px;
+    margin-bottom:0px;
 }
